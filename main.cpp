@@ -1,18 +1,19 @@
 #include <iostream>
 
-using namespace std;//tanpa menggunakan variable tambahan
+using namespace std;
 
-int main()
+int main() //dengan variable tambahan
 {
     int firstValue = 10;
     int secondValue = 8;
 
-    firstValue = firstValue + secondValue;
-    secondValue = firstValue - secondValue;
-    firstValue = firstValue - secondValue;
+    int temp = firstValue;
+    firstValue = secondValue;
+    secondValue = temp;
 
     cout << "setelah menukar\n";
     cout << "firstValue: " << firstValue << "\n";
     cout << "secondValue: " << secondValue << "\n";
+
     return 0;
 }
