@@ -4,13 +4,12 @@ using namespace std;
 
 int main()
 {
-    cout << "----------------------------------------------" << endl;
-    cout << "Nama : Asfa Salsabilla Sucipto\n" << endl;
-    cout << "NPM : 2310631170007\n" << endl;
-    cout << "Kelas : A - Informatika\n" << endl;
-    cout << "Cita Cita : Programmer\n" << endl;
-    cout << "Motivasi Masuk Informatika : Karena suka TIK\n" << endl;
-    cout << "----------------------------------------------" << endl;
-
+    int banyakBebek, banyakTeman, sisa;
+    cout << "masukkan banyak bebek: ";
+    cin >> banyakBebek;
+    cout << "masukkan banyak teman: ";
+    cin >> banyakTeman;
+    sisa = banyakBebek % banyakTeman;
+    cout << "sisa bebek milik pak Tatang = " << sisa;
     return 0;
 }
