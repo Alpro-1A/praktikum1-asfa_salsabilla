@@ -4,22 +4,21 @@ using namespace std;
 
 int main()
 {
-    int nilai;
-    cout << "masukkan score yang diterima: ";
-    cin >> nilai;
+    int x, y, z;
+    cout << "masukkan angka pertama: ";
+    cin >> x;
+    cout << "masukkan angka kedua: ";
+    cin >> y;
+    cout << "masukkan angka ketiga: ";
+    cin >> z;
 
-    if(nilai>=90){
-        cout << "Selamat! Anda mendapatkan nilai A" <<endl;
-    } else if(nilai>=80){
-        cout << "Anda mendapatkan nilai B" <<endl;
+    int terbesar = x;
+    if(y > terbesar){
+      terbesar = y;
 
-    } else if(nilai>=70){
-        cout << "Anda mendapatkan nilai C" <<endl;
-    } else if(nilai>=60){
-        cout << "Anda mendapatkan nilai D" <<endl;
-
-    } else if(nilai<60){
-        cout << "Anda mendapatkan nilai E" <<endl;
+    } else if(z > terbesar){
+        terbesar = z;
     }
+    cout << "angka terbesar adalah: " << terbesar << endl;
     return 0;
 }
