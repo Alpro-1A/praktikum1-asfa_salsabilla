@@ -2,18 +2,24 @@
 
 using namespace std;
 
-int main() //dengan variable tambahan
+int main()
 {
-    int firstValue = 10;
-    int secondValue = 8;
+    int nilai;
+    cout << "masukkan score yang diterima: ";
+    cin >> nilai;
 
-    int temp = firstValue;
-    firstValue = secondValue;
-    secondValue = temp;
+    if(nilai>=90){
+        cout << "Selamat! Anda mendapatkan nilai A" <<endl;
+    } else if(nilai>=80){
+        cout << "Anda mendapatkan nilai B" <<endl;
 
-    cout << "setelah menukar\n";
-    cout << "firstValue: " << firstValue << "\n";
-    cout << "secondValue: " << secondValue << "\n";
+    } else if(nilai>=70){
+        cout << "Anda mendapatkan nilai C" <<endl;
+    } else if(nilai>=60){
+        cout << "Anda mendapatkan nilai D" <<endl;
 
+    } else if(nilai<60){
+        cout << "Anda mendapatkan nilai E" <<endl;
+    }
     return 0;
 }
