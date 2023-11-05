@@ -4,42 +4,110 @@ using namespace std;
 
 int main()
 {
-    int pilihan;
-    cout << "ketik angka untuk bentuk bangun datar yang diinginkan: " <<endl;
-    cout << "1. Persegi" <<endl;
-    cout << "2. Persegi Panjang" <<endl;
-    cout << "3. Segitiga" <<endl;
-    cin >> pilihan;
-    int luas;
+    int batas;
+    int totalGanjil = 0;
+    int totalGenap = 0;
+    int totalPrima = 0;
+    int total = 0;
+    do
+    {
+        cout << "masukkan batas bilangan positif: ";
+        cin >> batas;
+    }while (batas <= 0);{
 
-    switch (pilihan){
-       case 1:
-            int sisi;
-            cout << "Masukkan panjang sisi persegi: ";
-            cin >> sisi;
-            luas = sisi*sisi;
-            cout << "luas persegi adalah: "<< luas;
-            break;
-       case 2 :
-            int panjang, lebar;
-            cout << "masukkan panjang persegi panjang: ";
-            cin >> panjang;
-            cout << "masukkan lebar persegi panjang: ";
-            cin >> lebar;
-            luas = panjang*lebar;
-            cout << "luas persegi panjang adalah: " << luas;
-            break;
-       case 3 :
-            int alas, tinggi;
-            cout << "masukkan alas segitiga: ";
-            cin >> alas;
-            cout << "masukkan tinggi segitiga: ";
-            cin >> tinggi;
-            luas = 0.5*alas*tinggi;
-            cout << "luas segitiga adalah: " <<luas;
-            break;
-       default:
-            cout << "pilihan tidak valid." <<endl;
+    cout << "Bilangan ganjil antara 1 dan " << batas << " adalah: ";
+
+    for (int i = 1; i <= batas; i++)
+        {
+          int bilanganGanjil = 1;
+          if (i%2 != 0) {
+            cout << i << " ";
+        }
     }
+    cout << endl;
+    cout << "Bilangan genap antara 1 dan " << batas << " adalah: ";
+
+    for (int i = 1; i <= batas; i++)
+    {
+        int bilanganGenap = 1;
+        if (i%2 ==0) {
+            cout << i << " ";
+        }
+    }
+    cout << endl;
+    cout << "Bilangan prima antara 1 dan " << batas << " adalah: ";
+
+    for (int i = 2; i <= batas; ++i)
+    {
+        int bilanganPrima = 1;
+        for (int j = 2; j*j <= i; ++j)
+        {
+            if (i % j == 0 )
+            {
+              bilanganPrima = 0 ;
+              break;
+            }
+        }
+    if (bilanganPrima == 1)
+      {
+        cout << i << " ";
+      }
+    }
+
+    for (int i=1; i <= batas; i+= 2){
+        totalGanjil += i;
+    }
+        cout <<"\njumlah semua bilangan Ganjil antara 1 hingga " << batas << " adalah: " << totalGanjil <<endl;
+}
+    for (int i=2; i <= batas; i+= 2){
+        totalGenap += i;
+    }
+        cout << "jumlah semua bilangan Genap antara 1 hingga " << batas << " adalah: " << totalGenap <<endl;
+
+    for (int i = 2; i <= batas; ++i)
+    {
+        int bilanganPrima = 1;
+        for (int j = 2; j*j <= i; ++j)
+        {
+            if (i % j == 0 )
+            {
+              bilanganPrima = 0 ;
+              break;
+            }
+        }
+    if (bilanganPrima == 1){
+        totalPrima += i;
+    }
+   }
+        cout << "jumlah semua bilangan prima antara 1 hingga " << batas << " adalah: " << totalPrima <<endl;
+
+
+    cout << "faktor faktor dari jumlah Ganjil tersebut adalah: ";
+    for (int i = 1; i <=totalGanjil;  i++){
+        if (totalGanjil % i == 0) {
+            cout << i << " ";
+        }
+    }
+    cout << endl;
+
+    cout << "faktor faktor dari jumlah Genap tersebut adalah: ";
+    for (int i = 1; i <= totalGenap;  i++){
+        if (totalGenap % i == 0) {
+            cout << i << " ";
+        }
+    }
+    cout << endl;
+
+    cout << "faktor faktor dari jumlah Prima tersebut adalah: ";
+    for (int i = 1; i <= totalPrima;  i++){
+        if (totalPrima % i == 0) {
+            cout << i << " ";
+        }
+    }
+    cout << endl;
+
+
     return 0;
 }
+
+
